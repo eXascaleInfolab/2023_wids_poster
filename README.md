@@ -58,3 +58,9 @@ Idea: apply model-agnostic explainability method called [LIME](https://arxiv.org
 ![alt text][pipeline]
 
 [pipeline]: https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/Model%20interpret%20pipeline.png "Model Explainability Pipeline"
+
+## Results
+Agreement of the annotators ([Krippendorff’s alpha](https://en.wikipedia.org/wiki/Krippendorff%27s_alpha)) is 0.786 allowing us to rely on the data.
+
+To compare human explanations with automatic explanations we calculated correlations between them for each data instance. We observe that on data instances where model predictions are correct the correlation is higher than for data instances where model makes errors (with mean values 0.48 and 0.41 for correct and incorrect predictions respectively). The difference is statistically significant. Thus, we established a robust way of identifying text segments relevant to human annotators performing relation extraction tasks, and validated that state-of-the-art ML models perform best when they "look" at the very same segments. This presents further research opportunities to leverage crowdsourced data to improve the accuracy of ML models, improve training data collection and preparation, reduce the risk of bias, and make the models more transparent and accessible.
+
