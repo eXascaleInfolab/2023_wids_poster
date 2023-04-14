@@ -24,6 +24,23 @@ State-of-the-art models show high performance (85% F1). However, the explainabil
   * helps people debug and improve the models
   * ensures that models are fair and non-discriminatory.
 
+## Approach
+
+<img src="https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/Model%20interpret%20pipeline.png"  width="70%" height="70%" alt="Model Explainability Pipeline">
+
+Given a model and a dataset, we aim to answer two questions: (i) what the model should know to make a correct prediction, and (ii) what the model actually knows.
+
+**What a model should know?**
+
+Hypothesis: model reasoning should be similar to human reasoning. 
+
+Idea: ask crowd annotators to annotate the words in the sentence as important or not important. I use [Toloka crowdsourcing platform](https://toloka.ai) to eploy crowd annotators.
+
+How: first ask annotators to “do” the task of judging on type of relation between two given entities in the sentence if any. By doing so, they are exercising their rationales instead of imagining that can potentially make their rationales annotation more reliable.
+
+**What a model knows?**
+
+Idea: apply model-agnostic explainability method called [LIME](https://arxiv.org/abs/1602.04938) to automatically extract the words’ weights.
 
 ## Crowdsourcing Task Design
 To ensure the good quality of annotations, we need to take into account the specific aspects of working with anonymous, online crowd annotators, for instance considering:
@@ -38,22 +55,6 @@ For our task, we applied the following filters of the annotators:
 ### Example of the task along with the annotations
 
 <img src="https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/task.png"  width="50%" height="50%" alt="Crowdoursing Task Design">
-
-## Approach
-
-**What a model should know?**
-
-Hypothesis: model reasoning should be similar to human reasoning. 
-
-Idea: ask crowd annotators to annotate the words in the sentence as important or not important. I use [Toloka crowdsourcing platform](https://toloka.ai) to eploy crowd annotators.
-
-How: first ask annotators to “do” the task of judging on type of relation between two given entities in the sentence if any. By doing so, they are exercising their rationales instead of imagining that can potentially make their rationales annotation more reliable.
-
-**What a model knows?**
-
-Idea: apply model-agnostic explainability method called [LIME](https://arxiv.org/abs/1602.04938) to automatically extract the words’ weights.
-
-<img src="https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/Model%20interpret%20pipeline.png"  width="70%" height="70%" alt="Model Explainability Pipeline">
 
 ## Results
 Agreement of the annotators ([Krippendorff’s alpha](https://en.wikipedia.org/wiki/Krippendorff%27s_alpha)) is 0.786 allowing us to rely on the data.
