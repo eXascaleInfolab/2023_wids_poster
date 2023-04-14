@@ -37,9 +37,7 @@ For our task, we applied the following filters of the annotators:
 
 ### Example of the task along with the annotations
 
-![alt text][task]
-
-[task]: https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/task.png "Crowdsourcing Task Design"
+<img src="https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/task.png"  width="50%" height="50%" alt="Crowdoursing Task Design">
 
 ## Approach
 
@@ -55,9 +53,7 @@ How: first ask annotators to “do” the task of judging on type of relation be
 
 Idea: apply model-agnostic explainability method called [LIME](https://arxiv.org/abs/1602.04938) to automatically extract the words’ weights.
 
-![alt text][pipeline]
-
-[pipeline]: https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/Model%20interpret%20pipeline.png "Model Explainability Pipeline"
+<img src="https://github.com/eXascaleInfolab/2023_wids_poster/blob/main/Model%20interpret%20pipeline.png"  width="70%" height="70%" alt="Model Explainability Pipeline">
 
 ## Results
 Agreement of the annotators ([Krippendorff’s alpha](https://en.wikipedia.org/wiki/Krippendorff%27s_alpha)) is 0.786 allowing us to rely on the data.
